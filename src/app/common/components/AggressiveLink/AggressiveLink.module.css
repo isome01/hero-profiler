@@ -1,0 +1,66 @@
+/* style.css */
+
+span.aggressive {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.dark-backdrop-1, .dark-backdrop-2, .dark-backdrop-3 {
+    cursor: pointer;
+    z-index: 0;
+    position: absolute;
+    opacity: .55;
+    height: 150px;
+    min-width: 350px;
+    width: 350px;
+    transition: opacity .55s, width .4s;
+}
+
+.dark-backdrop-1:hover, .dark-backdrop-2:hover, .dark-backdrop-3:hover{
+    opacity: .9;
+    width: 100%;
+}
+
+.dark-backdrop-1 {
+    left: 0;
+    background-image: linear-gradient(to right, rgb(0,0,0), rgb(0,0,0), rgba(0,0,0,0));
+}
+
+.dark-backdrop-2 {
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgb(0,0,0), rgb(0,0,0), rgb(0,0,0), rgba(0,0,0,0));
+}
+
+.dark-backdrop-3 {
+    right: 0;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgb(0,0,0), rgb(0,0,0), rgb(0,0,0), rgb(0,0,0));
+}
+
+a.aggressive:visited, a.aggressive:link {
+    z-index: 9999;
+    font-style: italic;
+    min-width: 300px;
+    text-align: center;
+    text-decoration: none;
+    transition: font-size .5s;
+}
+a.aggressive:hover {
+    color: red;
+    font-size: 3.5rem;
+}
+
+@media only screen and (max-width: 576px) {
+    a.aggressive:visited, a.aggressive:link {
+        font-size: 2rem;
+    }
+    .dark-backdrop-1, .dark-backdrop-2, .dark-backdrop-3 {
+        background: rgba(0, 0, 0, .41);
+        opacity: .9;
+        width: 100%;
+    }
+    .dark-backdrop-1:hover, .dark-backdrop-2:hover, .dark-backdrop-3:hover {
+        background: rgba(0, 0, 0, .41);
+        opacity: .9;
+        width: 100%;
+    }
+}
